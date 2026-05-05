@@ -31,29 +31,29 @@ This will create two files inside the bin/ folder: server and client.
 
 - `make re`		Cleans everything and builds the project again.
 
-
 ### Project Files
 - `src/server.c`	The server program.
 - `src/client.c`	The client program.
-- `src/utils.c`		Helper functions (like printing numbers or strings).
+- `src/utils.c`		Helper functions.
 - `src/minitalk.h` 	The header file.
 - `Makefile`		The build script.
 
 ## Resources
 **People**
-- p'pun [] 
-- sky []
+- p'pun ( tjukmong ) 
 
 **Documentation & References**
+- Project
+	- https://medium.com/@digitalpoolng/42-minitalk-building-a-simple-client-server-communication-program-in-c-a5e6d96c97ec
 - bit shift operations 
 	- https://www.geeksforgeeks.org/cpp/left-shift-right-shift-operators-c-cpp
 	- https://www.w3schools.com/c/c_bitwise_operators.php
-	
-
+- sigaction
+	- https://stackoverflow.com/questions/231912/what-is-the-difference-between-sigaction-and-signal
+	- https://man7.org/linux/man-pages/man2/sigaction.2.html
 
 **AI Usage**
-
-cwqhpvqwpcsdlkvc'sd;lcslac;lsxc;cvxzvlx;zcvlzhsd'/vs;cvjxcklh lxc klxc zl;jclxzljzxlkvhxzlvhzxcxlkvhzxclvxlc
+I asked AI about how to implement signal acknowledgments, solve some minor signal-related problems, and for markdown syntax help to write this README (My first time to write README).
 
 ## How to Use (Step-by-Step Example)
 `You need to open two terminal windows to test this.`
@@ -79,7 +79,7 @@ Open a new terminal. Run the client using the PID from Step 1 and type your mess
 ```
 
 ### Step 3: Check the Result
-Look back at `Terminal 1`. You will see your message printed:
+Look at `Terminal 1`. You will see your message printed:
 
 ```Plaintext
 Server PID : 12345
