@@ -6,7 +6,7 @@
 /*   By: vasukmua <wrp.sukmuang@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 20:17:26 by vasukmua          #+#    #+#             */
-/*   Updated: 2026/05/05 01:36:30 by vasukmua         ###   ########.fr       */
+/*   Updated: 2026/05/06 02:26:02 by vasukmua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int	main(int ac, char **av)
 	sigaction(SIGUSR1, &sa, NULL);
 	if (ac != 3)
 	{
-		ft_putstr("./client <pid> <message>");		
+		ft_putstr("./client <pid> <message>");
 		return (1);
 	}
 	send_word(server_pid, av[2]);
