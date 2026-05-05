@@ -6,7 +6,7 @@
 /*   By: vasukmua <wrp.sukmuang@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 20:17:18 by vasukmua          #+#    #+#             */
-/*   Updated: 2026/05/05 00:56:07 by vasukmua         ###   ########.fr       */
+/*   Updated: 2026/05/06 02:15:57 by vasukmua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,10 @@ int	main(void)
 	pid = getpid();
 	ft_putstr("Server PID : ");
 	ft_putnum(pid);
+	write(1, "\n", 1);
+	ft_putstr("In client type: .bin/client ");
+	ft_putnum(pid);
+	ft_putstr(" \"<Message>\"");
 	write(1, "\n", 1);
 	while (1)
 		pause();
