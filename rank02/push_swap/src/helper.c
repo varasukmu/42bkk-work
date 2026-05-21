@@ -1,42 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   helper_a.c                                         :+:      :+:    :+:   */
+/*   helper.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vasukmua <wrp.sukmuang@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 03:17:23 by vasukmua          #+#    #+#             */
-/*   Updated: 2026/05/21 05:08:11 by vasukmua         ###   ########.fr       */
+/*   Updated: 2026/05/21 16:16:37 by vasukmua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-
-void	free_argvs(char **argvs)
-{
-	int	i;
-
-	i = 0;
-	while (argvs[i])
-	{
-		free(argvs[i]);
-		i++;
-	}
-	free(argvs);
-}
-
-int	ft_lstsize(t_list *lst)
-{
-	int	count;
-
-	count = 0;
-	while (lst)
-	{
-		count++;
-		lst = lst->next;
-	}
-	return (count);
-}
 
 int	get_chunk(int size)
 {
@@ -90,4 +64,32 @@ void	assign_index(t_list *stack)
 		current->index = count;
 		current = current->next;
 	}
+}
+
+void	free_stack(t_list **stack)
+{
+	t_list	*tmp;
+
+	if (!stack || !*stack)
+		return ;
+	while (*stack)
+	{
+		tmp = (*stack)->next;
+		free(*stack);
+		*stack = tmp;
+	}
+	*stack = NULL;
+}
+
+void	free_argvs(char **argvs)
+{
+	int	i;
+
+	i = 0;
+	while (argvs[i])
+	{
+		free(argvs[i]);
+		i++;
+	}
+	free(argvs);
 }

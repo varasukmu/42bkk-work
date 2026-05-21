@@ -6,7 +6,7 @@
 /*   By: vasukmua <wrp.sukmuang@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 04:08:10 by vasukmua          #+#    #+#             */
-/*   Updated: 2026/05/21 05:06:38 by vasukmua         ###   ########.fr       */
+/*   Updated: 2026/05/21 16:04:38 by vasukmua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,15 @@ void	sort_btoa(t_list **stack_a, t_list **stack_b)
 		else
 			rrb(stack_b);
 	}
+}
+
+int	is_sorted(t_list *stack)
+{
+	while (stack && stack->next)
+	{
+		if (stack->nbr > stack->next->nbr)
+			return (0);
+		stack = stack->next;
+	}
+	return (1);
 }

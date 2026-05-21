@@ -6,25 +6,23 @@
 /*   By: vasukmua <wrp.sukmuang@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 19:36:04 by vasukmua          #+#    #+#             */
-/*   Updated: 2026/05/21 05:09:13 by vasukmua         ###   ########.fr       */
+/*   Updated: 2026/05/21 16:16:14 by vasukmua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	free_stack(t_list **stack)
+int	ft_lstsize(t_list *lst)
 {
-	t_list	*tmp;
+	int	count;
 
-	if (!stack || !*stack)
-		return ;
-	while (*stack)
+	count = 0;
+	while (lst)
 	{
-		tmp = (*stack)->next;
-		free(*stack);
-		*stack = tmp;
+		count++;
+		lst = lst->next;
 	}
-	*stack = NULL;
+	return (count);
 }
 
 t_list	*ft_lstnew(int value)

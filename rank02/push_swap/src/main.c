@@ -6,26 +6,11 @@
 /*   By: vasukmua <wrp.sukmuang@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 17:39:46 by vasukmua          #+#    #+#             */
-/*   Updated: 2026/05/21 05:23:18 by vasukmua         ###   ########.fr       */
+/*   Updated: 2026/05/21 16:16:31 by vasukmua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-
-//void	print_stack_index(t_list *stack)
-//{
-//	if (!stack)
-//	{
-//		printf("Stack is empty!\n");
-//		return ;
-//	}
-//	while (stack)
-//	{
-//		printf("[%d] -> Index: %d\n", stack->nbr, stack->index);
-//		stack = stack->next;
-//	}
-//	printf("\n");
-//}
 
 void	do_sort(t_list **stack_a, t_list **stack_b, int size)
 {
@@ -96,3 +81,18 @@ int	main(int ac, char **av)
 	free_stack(&stack_b);
 	return (0);
 }
+
+//void	print_stack_index(t_list *stack)
+//{
+//	if (!stack)
+//	{
+//		printf("Stack is empty!\n");
+//		return ;
+//	}
+//	while (stack)
+//	{
+//		printf("[%d] -> Index: %d\n", stack->nbr, stack->index);
+//		stack = stack->next;
+//	}
+//	printf("\n");
+//}

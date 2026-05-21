@@ -6,7 +6,7 @@
 /*   By: vasukmua <wrp.sukmuang@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 04:06:34 by vasukmua          #+#    #+#             */
-/*   Updated: 2026/05/21 05:03:45 by vasukmua         ###   ########.fr       */
+/*   Updated: 2026/05/21 16:32:41 by vasukmua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,23 @@
 void	pa(t_list **stack_a, t_list **stack_b)
 {
 	push(stack_b, stack_a);
-	ft_putstr("pa\n");
+	write(1, "pa\n", 3);
 }
 
 void	ra(t_list **stack_a)
 {
 	rotate(stack_a);
-	ft_putstr("ra\n");
+	write(1, "ra\n", 3);
 }
 
 void	sa(t_list **stack_a)
 {
 	swap(stack_a);
-	ft_putstr("sa\n");
+	write(1, "sa\n", 3);
 }
 
 void	rra(t_list **stack_a)
 {
 	reverse_rotate(stack_a);
-	ft_putstr("rra\n");
+	write(1, "rra\n", 4);
 }
